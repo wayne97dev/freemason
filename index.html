@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordo Illuminati • Sancta Sanctorum</title>
+    <meta name="description" content="The Ancient Order of the Illuminati. Only the initiated may cross the threshold.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Atmospheric layers -->
+    <div class="vignette"></div>
+    <div class="smoke"></div>
+    <div class="embers" id="embers"></div>
+    <div class="grain"></div>
+
+    <!-- ============================================ -->
+    <!-- THRESHOLD — The enigma                       -->
+    <!-- ============================================ -->
+    <section id="threshold" class="threshold">
+
+        <div class="ornament-row">
+            <span class="ornament-line"></span>
+            <span class="ornament-symbol">⚜ ◈ ⚜</span>
+            <span class="ornament-line"></span>
+        </div>
+
+        <div class="eye-portal">
+            <svg class="pyramid-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="halo" cx="50%" cy="40%" r="55%">
+                        <stop offset="0%" stop-color="#ffe27a" stop-opacity="0.85"/>
+                        <stop offset="40%" stop-color="#d4af37" stop-opacity="0.35"/>
+                        <stop offset="100%" stop-color="#d4af37" stop-opacity="0"/>
+                    </radialGradient>
+                    <radialGradient id="iris" cx="50%" cy="50%" r="60%">
+                        <stop offset="0%" stop-color="#fff7d4"/>
+                        <stop offset="40%" stop-color="#f4d03f"/>
+                        <stop offset="100%" stop-color="#8b6914"/>
+                    </radialGradient>
+                    <linearGradient id="pyramidGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#f4d03f"/>
+                        <stop offset="100%" stop-color="#8b6914"/>
+                    </linearGradient>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+
+                <!-- Halo / aura -->
+                <circle cx="250" cy="220" r="240" fill="url(#halo)" class="halo-pulse"/>
+
+                <!-- Light rays -->
+                <g class="rays" stroke="#f4d03f" stroke-width="1.2" opacity="0.55">
+                    <line x1="250" y1="220" x2="40" y2="40"/>
+                    <line x1="250" y1="220" x2="120" y2="20"/>
+                    <line x1="250" y1="220" x2="250" y2="0"/>
+                    <line x1="250" y1="220" x2="380" y2="20"/>
+                    <line x1="250" y1="220" x2="460" y2="40"/>
+                    <line x1="250" y1="220" x2="490" y2="180"/>
+                    <line x1="250" y1="220" x2="20" y2="180"/>
+                </g>
+
+                <!-- Outer triangle (ornate) -->
+                <polygon points="250,90 430,400 70,400"
+                         fill="rgba(212, 175, 55, 0.06)"
+                         stroke="url(#pyramidGrad)" stroke-width="3.5"
+                         filter="url(#glow)"/>
+
+                <!-- Inner triangle (subtle) -->
+                <polygon points="250,140 390,380 110,380"
+                         fill="none"
+                         stroke="#d4af37" stroke-width="1" opacity="0.4"/>
+
+                <!-- Pyramid steps (stylized lines) -->
+                <g stroke="#d4af37" stroke-width="0.8" opacity="0.5">
+                    <line x1="142" y1="345" x2="358" y2="345"/>
+                    <line x1="155" y1="320" x2="345" y2="320"/>
+                    <line x1="168" y1="295" x2="332" y2="295"/>
+                    <line x1="181" y1="270" x2="319" y2="270"/>
+                    <line x1="194" y1="245" x2="306" y2="245"/>
+                </g>
+
+                <!-- The all-seeing eye -->
+                <g class="eye-group">
+                    <ellipse cx="250" cy="220" rx="65" ry="32"
+                             fill="#0a0707" stroke="#d4af37" stroke-width="2"/>
+                    <ellipse cx="250" cy="220" rx="60" ry="28"
+                             fill="#1a0e08" stroke="#8b6914" stroke-width="0.5"/>
+                    <circle cx="250" cy="220" r="22" fill="url(#iris)" class="iris-pulse"/>
+                    <circle cx="250" cy="220" r="11" fill="#0a0707"/>
+                    <circle cx="244" cy="214" r="4" fill="#fff7d4"/>
+                    <circle cx="256" cy="226" r="1.5" fill="#fff7d4" opacity="0.6"/>
+                </g>
+
+                <!-- Roman numerals at base (MDCCLXXVI = 1776) -->
+                <text x="250" y="425" text-anchor="middle"
+                      font-family="Cinzel, serif" font-size="14"
+                      fill="#d4af37" letter-spacing="3">MDCCLXXVI</text>
+
+                <!-- Side ornaments -->
+                <text x="65" y="395" font-family="Cinzel, serif"
+                      font-size="22" fill="#8b6914">⚷</text>
+                <text x="425" y="395" font-family="Cinzel, serif"
+                      font-size="22" fill="#8b6914">⚷</text>
+            </svg>
+        </div>
+
+        <h1 class="title">Ordo Illuminati</h1>
+        <p class="subtitle">— Sancta Sanctorum —</p>
+
+        <div class="latin-motto">
+            <span>Novus</span>
+            <span class="dot">◆</span>
+            <span>Ordo</span>
+            <span class="dot">◆</span>
+            <span>Seclorum</span>
+        </div>
+
+        <div class="enigma-card">
+            <div class="card-corner top-left"></div>
+            <div class="card-corner top-right"></div>
+            <div class="card-corner bottom-left"></div>
+            <div class="card-corner bottom-right"></div>
+
+            <p class="enigma-label">The Initiate's Enigma</p>
+
+            <div class="enigma-text">
+                <p class="prelude">To cross the threshold of the Temple, prove yourself worthy of the <em>Light</em>.</p>
+
+                <blockquote class="riddle">
+                    «Three are the <em>sides</em> of the sacred Pyramid.<br>
+                    Three by three, the <em>degrees</em> of the Supreme Master.<br>
+                    Add the four alchemical <em>elements</em> —<br>
+                    fire, water, earth, air.<br><br>
+                    You shall obtain the number that crowns the Great Seal,<br>
+                    the number of stars above the eagle,<br>
+                    the number of colonies that saw the dawn of the Order.<br><br>
+                    <strong>What is the key?»</strong>
+                </blockquote>
+            </div>
+
+            <form id="enigma-form" class="enigma-form" autocomplete="off">
+                <label for="answer" class="sr-only">Enter the key</label>
+                <input type="text" id="answer" name="answer"
+                       placeholder="● ● ●"
+                       maxlength="12"
+                       autocomplete="off"
+                       spellcheck="false">
+                <button type="submit">
+                    <span class="btn-text">Open the Temple</span>
+                    <span class="btn-glyph">◬</span>
+                </button>
+            </form>
+
+            <p id="feedback" class="feedback" aria-live="polite"></p>
+            <p class="attempts" id="attempts"></p>
+        </div>
+
+        <div class="ornament-row bottom">
+            <span class="ornament-line"></span>
+            <span class="ornament-symbol">⚜ ◈ ⚜</span>
+            <span class="ornament-line"></span>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SANCTUM — Revealed content                   -->
+    <!-- ============================================ -->
+    <section id="sanctum" class="sanctum" aria-hidden="true">
+
+        <div class="reveal-flash"></div>
+
+        <header class="sanctum-header">
+            <div class="ornament-row">
+                <span class="ornament-line"></span>
+                <span class="ornament-symbol">☉ ◈ ☽</span>
+                <span class="ornament-line"></span>
+            </div>
+            <h2 class="sanctum-title">Welcome, Initiate</h2>
+            <p class="sanctum-subtitle">You have crossed the threshold. The Light receives you.</p>
+            <div class="sanctum-eye">◬</div>
+        </header>
+
+        <article class="creed">
+            <h3 class="creed-title">The Creed of the Thirteen</h3>
+            <p class="creed-intro">
+                For centuries, the Order has guarded the secret knowledge transmitted by the Founding Fathers.
+                Thirteen are the principles that uphold the Temple. Thirteen the seals of the Master.
+                Thirteen the truths that separate the initiate from the profane.
+            </p>
+        </article>
+
+        <div class="principles">
+            <div class="principle">
+                <span class="principle-num">I</span>
+                <h4>Lux in Tenebris</h4>
+                <p>The Light shines in the darkness, and the darkness has not received it. Seek the Light wherever it is hidden.</p>
+            </div>
+            <div class="principle">
+                <span class="principle-num">II</span>
+                <h4>Ordo ab Chao</h4>
+                <p>From the apparent chaos of the world, the initiate discerns the sacred order that governs all things.</p>
+            </div>
+            <div class="principle">
+                <span class="principle-num">III</span>
+                <h4>Trinitas</h4>
+                <p>Three are the pillars of the Temple: Wisdom, Strength, Beauty. Three the sides of the Pyramid.</p>
+            </div>
+            <div class="principle">
+                <span class="principle-num">IV</span>
+                <h4>Quattuor Elementa</h4>
+                <p>Fire, Water, Earth, Air — the four alchemical elements sustain the manifest world.</p>
+            </div>
+            <div class="principle">
+                <span class="principle-num">V</span>
+                <h4>Pentagrammaton</h4>
+                <p>The fifth element, Spirit, animates matter and joins heaven to earth.</p>
+            </div>
+            <div class="principle">
+                <span class="principle-num">VI</span>
+                <h4>Sigillum Salomonis</h4>
+                <p>«As above, so below.» The microcosm reflects the macrocosm.</p>
+            </div>
+            <div class="principle">
+                <span class="principle-num">VII</span>
+                <h4>Septem Artes</h4>
+                <p>The seven liberal arts are the stairways by which the initiate ascends to the higher degrees.</p>
+            </div>
+            <div class="principle">
+                <span class="principle-num">VIII</span>
+                <h4>Octava Sphæra</h4>
+                <p>Beyond the seven ancient planets lies the eighth sphere, dwelling of the fixed stars.</p>
+            </div>
+            <div class="principle">
+                <span class="principle-num">IX</span>
+                <h4>Nona Camera</h4>
+                <p>In the ninth chamber of the Temple is kept the Word that may not be spoken aloud.</p>
+            </div>
+            <div class="principle">
+                <span class="principle-num">X</span>
+                <h4>Decem Sephiroth</h4>
+                <p>The ten divine emanations compose the Tree of Life, the map of the cosmos.</p>
+            </div>
+            <div class="principle">
+                <span class="principle-num">XI</span>
+                <h4>Magnum Opus</h4>
+                <p>The alchemical Great Work transmutes the lead of the soul into the gold of the Spirit.</p>
+            </div>
+            <div class="principle">
+                <span class="principle-num">XII</span>
+                <h4>Duodecim Signa</h4>
+                <p>The twelve signs of the Zodiac mark the initiate's passage through the sacred year.</p>
+            </div>
+            <div class="principle principle-final">
+                <span class="principle-num">XIII</span>
+                <h4>Magisterium</h4>
+                <p>The thirteenth degree is the Fulfillment: only those who have walked through all the previous may enter the supreme Mystery.</p>
+            </div>
+        </div>
+
+        <article class="vow">
+            <h3>The Oath</h3>
+            <p class="vow-text">
+                «I, Initiate of the Order, swear by the Eye that sees all,
+                by the Pyramid that touches the heavens, by the eternal Fire that burns
+                in the breast of free men —<br><br>
+                to keep the seals, to honor the brethren, never to reveal to the profane
+                what has been transmitted unto me. <em>Sub rosa, in saecula saeculorum.</em>»
+            </p>
+            <div class="seal">
+                <span>⚜</span> SIGILLUM ORDINIS <span>⚜</span>
+            </div>
+        </article>
+
+        <footer class="sanctum-footer">
+            <p class="footer-motto">— Annuit Cœptis · Novus Ordo Seclorum —</p>
+            <p class="footer-year">MDCCLXXVI &nbsp;·&nbsp; In Aeternum</p>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
