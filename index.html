@@ -32,85 +32,238 @@
         <div class="eye-portal">
             <svg class="pyramid-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                    <radialGradient id="halo" cx="50%" cy="40%" r="55%">
-                        <stop offset="0%" stop-color="#ffe27a" stop-opacity="0.85"/>
-                        <stop offset="40%" stop-color="#d4af37" stop-opacity="0.35"/>
+                    <radialGradient id="halo" cx="50%" cy="32%" r="60%">
+                        <stop offset="0%" stop-color="#ffe27a" stop-opacity="0.95"/>
+                        <stop offset="35%" stop-color="#f4d03f" stop-opacity="0.35"/>
                         <stop offset="100%" stop-color="#d4af37" stop-opacity="0"/>
                     </radialGradient>
-                    <radialGradient id="iris" cx="50%" cy="50%" r="60%">
-                        <stop offset="0%" stop-color="#fff7d4"/>
-                        <stop offset="40%" stop-color="#f4d03f"/>
-                        <stop offset="100%" stop-color="#8b6914"/>
-                    </radialGradient>
-                    <linearGradient id="pyramidGrad" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#f4d03f"/>
-                        <stop offset="100%" stop-color="#8b6914"/>
+                    <linearGradient id="stoneFace" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#8b6914"/>
+                        <stop offset="30%" stop-color="#d4af37"/>
+                        <stop offset="60%" stop-color="#a88820"/>
+                        <stop offset="100%" stop-color="#3d2c08"/>
                     </linearGradient>
-                    <filter id="glow">
-                        <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                        <feMerge>
-                            <feMergeNode in="coloredBlur"/>
-                            <feMergeNode in="SourceGraphic"/>
-                        </feMerge>
+                    <linearGradient id="capFace" x1="0" y1="0" x2="0.7" y2="0.5">
+                        <stop offset="0%" stop-color="#a88820"/>
+                        <stop offset="40%" stop-color="#f4d03f"/>
+                        <stop offset="100%" stop-color="#5a4408"/>
+                    </linearGradient>
+                    <radialGradient id="iris" cx="42%" cy="40%" r="65%">
+                        <stop offset="0%" stop-color="#fff7d4"/>
+                        <stop offset="35%" stop-color="#f4d03f"/>
+                        <stop offset="75%" stop-color="#8b6914"/>
+                        <stop offset="100%" stop-color="#2a1f04"/>
+                    </radialGradient>
+                    <radialGradient id="eyeWhite" cx="40%" cy="35%">
+                        <stop offset="0%" stop-color="#fffaf0"/>
+                        <stop offset="70%" stop-color="#e8d9b0"/>
+                        <stop offset="100%" stop-color="#7a6a48"/>
+                    </radialGradient>
+                    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="3"/>
                     </filter>
                 </defs>
 
-                <!-- Halo / aura -->
-                <circle cx="250" cy="220" r="240" fill="url(#halo)" class="halo-pulse"/>
+                <!-- Halo aura -->
+                <circle cx="250" cy="160" r="240" fill="url(#halo)" class="halo-pulse"/>
 
-                <!-- Light rays -->
-                <g class="rays" stroke="#f4d03f" stroke-width="1.2" opacity="0.55">
-                    <line x1="250" y1="220" x2="40" y2="40"/>
-                    <line x1="250" y1="220" x2="120" y2="20"/>
-                    <line x1="250" y1="220" x2="250" y2="0"/>
-                    <line x1="250" y1="220" x2="380" y2="20"/>
-                    <line x1="250" y1="220" x2="460" y2="40"/>
-                    <line x1="250" y1="220" x2="490" y2="180"/>
-                    <line x1="250" y1="220" x2="20" y2="180"/>
+                <!-- Sunburst rays from the eye -->
+                <g class="rays" stroke="#f4d03f" fill="none">
+                    <line x1="250" y1="140" x2="490" y2="140" stroke-width="0.6" opacity="0.3"/>
+                    <line x1="250" y1="140" x2="482" y2="78"  stroke-width="1.2" opacity="0.55"/>
+                    <line x1="250" y1="140" x2="458" y2="20"  stroke-width="0.6" opacity="0.3"/>
+                    <line x1="250" y1="140" x2="420" y2="-30" stroke-width="1.2" opacity="0.55"/>
+                    <line x1="250" y1="140" x2="370" y2="-68" stroke-width="0.6" opacity="0.3"/>
+                    <line x1="250" y1="140" x2="312" y2="-92" stroke-width="1.2" opacity="0.55"/>
+                    <line x1="250" y1="140" x2="250" y2="-110" stroke-width="0.6" opacity="0.3"/>
+                    <line x1="250" y1="140" x2="188" y2="-92" stroke-width="1.2" opacity="0.55"/>
+                    <line x1="250" y1="140" x2="130" y2="-68" stroke-width="0.6" opacity="0.3"/>
+                    <line x1="250" y1="140" x2="80"  y2="-30" stroke-width="1.2" opacity="0.55"/>
+                    <line x1="250" y1="140" x2="42"  y2="20"  stroke-width="0.6" opacity="0.3"/>
+                    <line x1="250" y1="140" x2="18"  y2="78"  stroke-width="1.2" opacity="0.55"/>
+                    <line x1="250" y1="140" x2="10"  y2="140" stroke-width="0.6" opacity="0.3"/>
+                    <line x1="250" y1="140" x2="18"  y2="202" stroke-width="1.2" opacity="0.45"/>
+                    <line x1="250" y1="140" x2="42"  y2="260" stroke-width="0.6" opacity="0.25"/>
+                    <line x1="250" y1="140" x2="80"  y2="310" stroke-width="1"   opacity="0.4"/>
+                    <line x1="250" y1="140" x2="420" y2="310" stroke-width="1"   opacity="0.4"/>
+                    <line x1="250" y1="140" x2="458" y2="260" stroke-width="0.6" opacity="0.25"/>
+                    <line x1="250" y1="140" x2="482" y2="202" stroke-width="1.2" opacity="0.45"/>
                 </g>
 
-                <!-- Outer triangle (ornate) -->
-                <polygon points="250,90 430,400 70,400"
-                         fill="rgba(212, 175, 55, 0.06)"
-                         stroke="url(#pyramidGrad)" stroke-width="3.5"
-                         filter="url(#glow)"/>
-
-                <!-- Inner triangle (subtle) -->
-                <polygon points="250,140 390,380 110,380"
-                         fill="none"
-                         stroke="#d4af37" stroke-width="1" opacity="0.4"/>
-
-                <!-- Pyramid steps (stylized lines) -->
-                <g stroke="#d4af37" stroke-width="0.8" opacity="0.5">
-                    <line x1="142" y1="345" x2="358" y2="345"/>
-                    <line x1="155" y1="320" x2="345" y2="320"/>
-                    <line x1="168" y1="295" x2="332" y2="295"/>
-                    <line x1="181" y1="270" x2="319" y2="270"/>
-                    <line x1="194" y1="245" x2="306" y2="245"/>
+                <!-- Wisps of cloud below the cap -->
+                <g opacity="0.4" filter="url(#softGlow)">
+                    <ellipse cx="170" cy="195" rx="40" ry="6" fill="#ffe27a"/>
+                    <ellipse cx="330" cy="195" rx="40" ry="6" fill="#ffe27a"/>
+                    <ellipse cx="210" cy="208" rx="22" ry="4" fill="#ffe27a"/>
+                    <ellipse cx="290" cy="208" rx="22" ry="4" fill="#ffe27a"/>
+                    <ellipse cx="250" cy="200" rx="14" ry="3" fill="#ffe27a"/>
                 </g>
 
-                <!-- The all-seeing eye -->
+                <!-- ============== PYRAMID BODY (truncated) ============== -->
+                <polygon points="195,222 305,222 420,415 80,415"
+                         fill="url(#stoneFace)"
+                         stroke="#2a1f04" stroke-width="1.5"/>
+
+                <!-- Top platform sliver (shadow line) -->
+                <polygon points="195,222 305,222 300,225 200,225" fill="#3a2a04" opacity="0.7"/>
+
+                <!-- 13 stone courses -->
+                <g stroke="#2a1f04" stroke-width="0.8" opacity="0.7" fill="none">
+                    <line x1="190" y1="237" x2="310" y2="237"/>
+                    <line x1="184" y1="252" x2="316" y2="252"/>
+                    <line x1="178" y1="267" x2="322" y2="267"/>
+                    <line x1="172" y1="282" x2="328" y2="282"/>
+                    <line x1="166" y1="297" x2="334" y2="297"/>
+                    <line x1="160" y1="312" x2="340" y2="312"/>
+                    <line x1="154" y1="327" x2="346" y2="327"/>
+                    <line x1="148" y1="342" x2="352" y2="342"/>
+                    <line x1="142" y1="357" x2="358" y2="357"/>
+                    <line x1="136" y1="372" x2="364" y2="372"/>
+                    <line x1="130" y1="387" x2="370" y2="387"/>
+                    <line x1="124" y1="402" x2="376" y2="402"/>
+                </g>
+
+                <!-- Brick joints, staggered between courses -->
+                <g stroke="#2a1f04" stroke-width="0.5" opacity="0.55">
+                    <line x1="223" y1="222" x2="222" y2="237"/>
+                    <line x1="252" y1="222" x2="252" y2="237"/>
+                    <line x1="278" y1="222" x2="279" y2="237"/>
+                    <line x1="208" y1="237" x2="207" y2="252"/>
+                    <line x1="237" y1="237" x2="236" y2="252"/>
+                    <line x1="263" y1="237" x2="264" y2="252"/>
+                    <line x1="293" y1="237" x2="294" y2="252"/>
+                    <line x1="218" y1="252" x2="217" y2="267"/>
+                    <line x1="248" y1="252" x2="248" y2="267"/>
+                    <line x1="278" y1="252" x2="279" y2="267"/>
+                    <line x1="305" y1="252" x2="307" y2="267"/>
+                    <line x1="200" y1="267" x2="198" y2="282"/>
+                    <line x1="230" y1="267" x2="229" y2="282"/>
+                    <line x1="260" y1="267" x2="260" y2="282"/>
+                    <line x1="290" y1="267" x2="291" y2="282"/>
+                    <line x1="315" y1="267" x2="317" y2="282"/>
+                    <line x1="190" y1="282" x2="188" y2="297"/>
+                    <line x1="220" y1="282" x2="219" y2="297"/>
+                    <line x1="250" y1="282" x2="250" y2="297"/>
+                    <line x1="280" y1="282" x2="281" y2="297"/>
+                    <line x1="310" y1="282" x2="312" y2="297"/>
+                    <line x1="178" y1="297" x2="176" y2="312"/>
+                    <line x1="210" y1="297" x2="209" y2="312"/>
+                    <line x1="240" y1="297" x2="240" y2="312"/>
+                    <line x1="270" y1="297" x2="271" y2="312"/>
+                    <line x1="300" y1="297" x2="302" y2="312"/>
+                    <line x1="325" y1="297" x2="327" y2="312"/>
+                    <line x1="188" y1="312" x2="186" y2="327"/>
+                    <line x1="220" y1="312" x2="219" y2="327"/>
+                    <line x1="250" y1="312" x2="250" y2="327"/>
+                    <line x1="280" y1="312" x2="281" y2="327"/>
+                    <line x1="312" y1="312" x2="314" y2="327"/>
+                    <line x1="170" y1="327" x2="168" y2="342"/>
+                    <line x1="200" y1="327" x2="198" y2="342"/>
+                    <line x1="230" y1="327" x2="229" y2="342"/>
+                    <line x1="260" y1="327" x2="261" y2="342"/>
+                    <line x1="290" y1="327" x2="292" y2="342"/>
+                    <line x1="320" y1="327" x2="322" y2="342"/>
+                    <line x1="180" y1="342" x2="178" y2="357"/>
+                    <line x1="212" y1="342" x2="210" y2="357"/>
+                    <line x1="244" y1="342" x2="244" y2="357"/>
+                    <line x1="276" y1="342" x2="277" y2="357"/>
+                    <line x1="308" y1="342" x2="310" y2="357"/>
+                    <line x1="335" y1="342" x2="338" y2="357"/>
+                    <line x1="160" y1="357" x2="158" y2="372"/>
+                    <line x1="190" y1="357" x2="188" y2="372"/>
+                    <line x1="220" y1="357" x2="218" y2="372"/>
+                    <line x1="250" y1="357" x2="250" y2="372"/>
+                    <line x1="280" y1="357" x2="282" y2="372"/>
+                    <line x1="312" y1="357" x2="314" y2="372"/>
+                    <line x1="340" y1="357" x2="343" y2="372"/>
+                    <line x1="170" y1="372" x2="167" y2="387"/>
+                    <line x1="200" y1="372" x2="198" y2="387"/>
+                    <line x1="232" y1="372" x2="231" y2="387"/>
+                    <line x1="264" y1="372" x2="265" y2="387"/>
+                    <line x1="296" y1="372" x2="298" y2="387"/>
+                    <line x1="328" y1="372" x2="330" y2="387"/>
+                    <line x1="350" y1="372" x2="354" y2="387"/>
+                    <line x1="150" y1="387" x2="146" y2="402"/>
+                    <line x1="180" y1="387" x2="178" y2="402"/>
+                    <line x1="212" y1="387" x2="210" y2="402"/>
+                    <line x1="244" y1="387" x2="243" y2="402"/>
+                    <line x1="276" y1="387" x2="277" y2="402"/>
+                    <line x1="308" y1="387" x2="310" y2="402"/>
+                    <line x1="340" y1="387" x2="342" y2="402"/>
+                    <line x1="360" y1="387" x2="364" y2="402"/>
+                    <line x1="160" y1="402" x2="156" y2="415"/>
+                    <line x1="190" y1="402" x2="188" y2="415"/>
+                    <line x1="220" y1="402" x2="218" y2="415"/>
+                    <line x1="250" y1="402" x2="250" y2="415"/>
+                    <line x1="280" y1="402" x2="282" y2="415"/>
+                    <line x1="310" y1="402" x2="312" y2="415"/>
+                    <line x1="340" y1="402" x2="343" y2="415"/>
+                    <line x1="365" y1="402" x2="370" y2="415"/>
+                </g>
+
+                <!-- Right side shadow overlay (3D depth) -->
+                <polygon points="305,222 420,415 250,415 250,222"
+                         fill="rgba(0, 0, 0, 0.32)"/>
+
+                <!-- Left edge highlight -->
+                <line x1="195" y1="222" x2="80" y2="415"
+                      stroke="#ffe27a" stroke-width="1.5" opacity="0.5"/>
+
+                <!-- Mist at base -->
+                <ellipse cx="250" cy="418" rx="180" ry="8"
+                         fill="rgba(244, 208, 63, 0.18)" filter="url(#softGlow)"/>
+
+                <!-- ============== CAPSTONE (separate floating triangle) ============== -->
+                <polygon points="250,80 322,180 178,180"
+                         fill="url(#capFace)"
+                         stroke="#2a1f04" stroke-width="1.5"/>
+                <polygon points="250,80 322,180 250,180"
+                         fill="rgba(0, 0, 0, 0.32)"/>
+                <line x1="250" y1="80" x2="178" y2="180"
+                      stroke="#ffe27a" stroke-width="1.5" opacity="0.5"/>
+
+                <!-- ============== THE EYE ============== -->
                 <g class="eye-group">
-                    <ellipse cx="250" cy="220" rx="65" ry="32"
-                             fill="#0a0707" stroke="#d4af37" stroke-width="2"/>
-                    <ellipse cx="250" cy="220" rx="60" ry="28"
-                             fill="#1a0e08" stroke="#8b6914" stroke-width="0.5"/>
-                    <circle cx="250" cy="220" r="22" fill="url(#iris)" class="iris-pulse"/>
-                    <circle cx="250" cy="220" r="11" fill="#0a0707"/>
-                    <circle cx="244" cy="214" r="4" fill="#fff7d4"/>
-                    <circle cx="256" cy="226" r="1.5" fill="#fff7d4" opacity="0.6"/>
+                    <!-- Socket shadow -->
+                    <ellipse cx="250" cy="142" rx="50" ry="24" fill="#000" opacity="0.4"/>
+                    <!-- Eye white -->
+                    <ellipse cx="250" cy="140" rx="48" ry="22" fill="url(#eyeWhite)"/>
+                    <!-- Top eyelid (almond curve) -->
+                    <path d="M 202 140 Q 250 110 298 140"
+                          fill="none" stroke="#2a1f04" stroke-width="2.5" stroke-linecap="round"/>
+                    <!-- Bottom eyelid -->
+                    <path d="M 202 140 Q 250 168 298 140"
+                          fill="none" stroke="#2a1f04" stroke-width="2" stroke-linecap="round"/>
+                    <!-- Subtle eyelashes -->
+                    <g stroke="#2a1f04" stroke-width="0.9" stroke-linecap="round" opacity="0.65">
+                        <line x1="218" y1="125" x2="216" y2="118"/>
+                        <line x1="232" y1="118" x2="231" y2="110"/>
+                        <line x1="250" y1="113" x2="250" y2="105"/>
+                        <line x1="268" y1="118" x2="269" y2="110"/>
+                        <line x1="282" y1="125" x2="284" y2="118"/>
+                    </g>
+                    <!-- Iris -->
+                    <circle cx="250" cy="140" r="18" fill="url(#iris)" class="iris-pulse"/>
+                    <!-- Iris detail rings -->
+                    <circle cx="250" cy="140" r="14" fill="none"
+                            stroke="#5a4408" stroke-width="0.5" opacity="0.5"/>
+                    <circle cx="250" cy="140" r="10" fill="none"
+                            stroke="#3a2a04" stroke-width="0.4" opacity="0.4"/>
+                    <!-- Pupil -->
+                    <circle cx="250" cy="140" r="8" fill="#0a0707"/>
+                    <!-- Highlights -->
+                    <ellipse cx="246" cy="136" rx="3.5" ry="3" fill="#fffaf0" opacity="0.95"/>
+                    <circle cx="254" cy="144" r="1.2" fill="#fffaf0" opacity="0.5"/>
                 </g>
 
-                <!-- Roman numerals at base (MDCCLXXVI = 1776) -->
-                <text x="250" y="425" text-anchor="middle"
+                <!-- MDCCLXXVI -->
+                <text x="250" y="442" text-anchor="middle"
                       font-family="Cinzel, serif" font-size="14"
-                      fill="#d4af37" letter-spacing="3">MDCCLXXVI</text>
+                      fill="#d4af37" letter-spacing="4">MDCCLXXVI</text>
 
                 <!-- Side ornaments -->
-                <text x="65" y="395" font-family="Cinzel, serif"
-                      font-size="22" fill="#8b6914">⚷</text>
-                <text x="425" y="395" font-family="Cinzel, serif"
-                      font-size="22" fill="#8b6914">⚷</text>
+                <text x="60"  y="430" font-family="Cinzel, serif" font-size="22" fill="#8b6914">⚷</text>
+                <text x="430" y="430" font-family="Cinzel, serif" font-size="22" fill="#8b6914">⚷</text>
             </svg>
         </div>
 

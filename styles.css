@@ -169,7 +169,7 @@ body {
 }
 
 .halo-pulse {
-    transform-origin: 250px 220px;
+    transform-origin: 250px 160px;
     animation: haloPulse 4s ease-in-out infinite;
 }
 
@@ -179,7 +179,7 @@ body {
 }
 
 .iris-pulse {
-    transform-origin: 250px 220px;
+    transform-origin: 250px 140px;
     animation: irisPulse 3s ease-in-out infinite;
 }
 
@@ -189,7 +189,7 @@ body {
 }
 
 .rays {
-    transform-origin: 250px 220px;
+    transform-origin: 250px 140px;
     animation: raysSpin 60s linear infinite;
 }
 
